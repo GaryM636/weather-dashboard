@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const forecastHeader = document.getElementById('forecastHeader');
     const apiKey = '4c41a2495ed39238f2bc36e60c6bb5cd';
 
-    
     renderSearchHistory();
 
     form.addEventListener('submit', function (event) {
