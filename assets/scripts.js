@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Fetch city coordinates using cityName
     function fetchCityCoordinates(cityName) {
         // Construct the API URL to get city coordinates
-        const geoApiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${apiKey}`;
+        const geoApiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${apiKey}`;
 
         fetch(geoApiUrl)
             .then(response => response.json())
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(response => response.json())
             .then(currentWeatherData => {
                 console.log(currentWeatherData);
-                const iconUrl = `http://openweathermap.org/img/w/${currentWeatherData.weather[0].icon}.png`;
+                const iconUrl = `https://openweathermap.org/img/w/${currentWeatherData.weather[0].icon}.png`;
                 currentWeatherHeader.innerHTML = `
                     <h2>${cityName}</h2>
                     <h3>${dayjs().format('MMMM D, YYYY')}</h3>
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     const forecastDayContainer = document.createElement('div');
                     forecastDayContainer.classList.add('forecast-day');
                     forecastDayContainer.innerHTML = `<h3>${dayjs(forecast.dt_txt).format('MMMM D, YYYY')}</h3>
-                        <img src="http://openweathermap.org/img/w/${forecast.weather[0].icon}.png" alt="Weather Icon">
+                        <img src="https://openweathermap.org/img/w/${forecast.weather[0].icon}.png" alt="Weather Icon">
                         <p>Temperature: ${forecast.main.temp}°F</p>
                         <p>Humidity: ${forecast.main.humidity}%</p>
                         <p>Wind Speed: ${forecast.wind.speed} mph</p>`;
