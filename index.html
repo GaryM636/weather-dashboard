@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.6"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <div class="container">
+        <div class="search-container">
+            <form id="cityForm">
+                <label for="cityInput">Enter City:</label>
+                <input type="text" id="cityInput" required>
+                <button type="submit">Search</button>
+            </form>
+            <div id="searchHistory"></div>
+        </div>
+        <div class="weather-container">
+            <div id="currentWeatherHeader">
+                <div id="currentWeather"></div>
+            </div>
+            <div id="forecastHeader">
+                <div id="forecast"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/scripts.js"></script>
+</body>
+
+</html>

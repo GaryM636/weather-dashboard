@@ -1,0 +1,77 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(90deg, #4a90e2, #7b69ec);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.weather-container {
+    flex: 2;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#currentWeather,
+#forecast,
+#searchHistory {
+    margin-top: 20px;
+}
+
+#searchHistory {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+#searchHistory p {
+    margin: 0;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+#searchHistory p:hover {
+    background-color: #ddd;
+}
+
+.forecast-days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.forecast-day, #currentWeatherHeader {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+    flex: 1;
+}
